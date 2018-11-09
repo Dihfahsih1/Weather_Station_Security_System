@@ -1,0 +1,67 @@
+{% extends "base_site.html" %}
+
+{% block content %}
+  <div class="right_col" role="main">
+    <div class="">
+      <div class="page-title">
+        <div class="title_left">
+          <h3>General Settings </h3>
+        </div>
+
+        <div class="title_right">
+          <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+            
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="x_panel">
+            <div class="x_title">
+              <h2><small> Survailance Settings </small></h2>
+              
+              
+              <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+              <br />
+              <form  action= "" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                  <div class="dropdown">
+                      <label for="middle-name" >Select Station</label></br>
+                      <select class="btn btn-primary dropdown-toggle" type="button" name="Station">
+                          <option value="Makerere">Makerere  Station</option>
+                          <option value="Mbarara">Mbarara Station</option>
+                          <option value="Kabale">Kabale Station</option>
+                          <option value="Kapkyorwa">Kapkyorwa Station</option>
+                      </select>
+                 </div>
+                 
+                <div class="btn-group" data-toggle="buttons"> 
+                    <label for="middle-name" >Activate/Deactivate Surveillance</label></br>
+                  <label class="btn btn-primary active">
+                      <input type="radio" value="ON" name="options"> ON
+                  </label>
+                  <label class="btn btn-primary">
+                      <input type="radio"value="OFF" name="options"> OFF
+                  </label>
+              </div>   
+                <div class="form-group">
+                  <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                    <button type="submit" class="btn btn-success">Confirm </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
+
+{% block javascripts %}
+  {{ super()}}
+  <!-- Parsley -->
+  <script src="{{ url_for('static', filename='vendors/parsleyjs/dist/parsley.min.js') }}"></script>
+{% endblock javascripts %}

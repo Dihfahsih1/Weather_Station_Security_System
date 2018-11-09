@@ -1,0 +1,78 @@
+{% extends "base_site.html" %}
+
+{% block content %}
+  <div class="right_col" role="main">
+    <div class="">
+      <div class="page-title">
+        
+
+        <div class="title_right">
+          <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+            
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="x_panel">
+            <div class="x_title">
+              <h2><small>Users that subscribed for Notifications </small></h2>
+              
+              
+              <div class="clearfix"></div>
+              
+            </div>
+            <div class="x_content">
+              <br />
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <table id="datatable" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Station</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                             
+                            </tr>
+                        </thead>
+
+                 
+                        <tbody>
+                            {% for subscriber in subscribers %}
+                            <tr>
+                                <td>{{subscriber.Name}}</td>
+                                <td>{{subscriber.Email}}</td>
+                                <td>{{subscriber.Phone}}</td>
+                                <td>{{subscriber.Station}}</td>
+                                
+                            </tr>
+                            {% endfor %}
+                            
+              
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+  
+               
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
+
+{% block javascripts %}
+  {{ super()}}
+  <!-- Parsley -->
+  <script src="{{ url_for('static', filename='vendors/parsleyjs/dist/parsley.min.js') }}"></script>
+{% endblock javascripts %}
