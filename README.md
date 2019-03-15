@@ -1,4 +1,9 @@
 # Weather_Station_Security_System
+This System was developed by 
+1. Mugoya Dihfahsih
+2. Ainekirabo Mbabazi
+3. Gemmar Freedom
+3. Suuna Conrad
 The Wimea Weather Security System(WWSS) was an idea of three emphatic  and one ambitious young lady.  We came up with a low cost solution to address the problem of vandalism and theft of the various high cost weather equipment .
 
 Theft and vandalism of these equipment has been on the rise lately due to their high demand on the local market.
